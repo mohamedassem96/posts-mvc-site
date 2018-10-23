@@ -2,6 +2,6 @@
 
 require_once '../app/bootstrap.php';
 
-// Init Core library
+// Init core library
 
-$init = new Core();
+$init = new core();

@@ -1,12 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: tofsh
- * Date: 10/22/2018
- * Time: 8:19 PM
- */
 
-class Pages
+
+class Pages extends Controller
 {
     public function __construct()
     {
@@ -15,11 +10,15 @@ class Pages
 
     public function index()
     {
+        $data = ['title' => 'Hello every buddy'];
 
+        $this->view('pages/index', $data);
     }
 
-    public function defaultFun($id, $ids)
+    public function about()
     {
-        echo $id . ' ' . $ids;
+        $data = ['title' => 'Hello every buddy'];
+
+        $this->view('pages/about', $data);
     }
 }

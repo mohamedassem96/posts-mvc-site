@@ -2,7 +2,7 @@
 
 
 /*
- * Creates URL & loads Core Controller
+ * Creates URL & loads core Controller
  * URL Format - /Controller/Action/Params
  *
  */
