@@ -4,6 +4,7 @@
 /*
  * Base Controller
  * Loads Models and Views
+ *
  */
 
 class Controller
@@ -14,8 +15,7 @@ class Controller
         if (file_exists('../app/models/' . $model . '.php'))
         {
             require_once '../app/models/' . $model . '.php';
-
-            return new $model;
+            return new $model; // Instantiate Model Class
         }
         else
         {
