@@ -56,7 +56,7 @@ Class Core
         $this->currentController = new $this->currentController;
 
 
-        echo '<br>' . $this->currentMethod . '<br>';
+//        echo '<br>' . $this->currentMethod . '<br>';
 
 
         call_user_func_array([ $this->currentController, $this->currentMethod ], $this->params);

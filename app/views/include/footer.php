@@ -1,3 +1,3 @@
-<script src="/js/main.js"> </script>
+  <script src="<?= JSROOT ?>main.js"></script>
 </body>
 </html>

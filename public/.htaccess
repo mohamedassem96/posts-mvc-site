@@ -1,12 +1,6 @@
-<IfModule mod_rewrite.c>
+ RewriteEngine on
+ RewriteCond %{REQUEST_FILENAME} !-f
+ RewriteCond %{REQUEST_FILENAME} !-d
+ RewriteRule ^(.*)$ /index.php
 
-Options -Multiviews
-
-RewriteEngine On
-
-RewriteCond %{REQUSET_FILENAME} !-d
-RewriteCond %{REQUSET_FILENAME} !-f
-
-RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
-
-</IfModule>
+ # redirect any Apache requset to index.php

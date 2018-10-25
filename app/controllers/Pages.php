@@ -8,7 +8,7 @@ class Pages extends Controller
     public function __construct()
     {
 
-        echo 'pages loaded';
+//        echo 'pages loaded';
     }
 
     public function index()
