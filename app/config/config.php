@@ -22,7 +22,7 @@ define('SITENAME', 'phptraversymvc');
 
 define('DB_HOST', 'phptraversymvc.com');
 
-define('DB_NAME', 'tmvc');
+define('DB_NAME', 'shareposts');
 
 define('DB_USERNAME', 'root');
 
