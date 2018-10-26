@@ -28,8 +28,6 @@ Class Core
 
             unset($url[0]);
         }
-
-
         // require the Controller
         require_once '../app/controllers/' . $this->currentController . '.php';
 
@@ -39,6 +37,7 @@ Class Core
             if (method_exists($this->currentController, $url[1]))
             {
                 $this->currentMethod = $url[1];
+
                 unset($url[1]);
             }
         }
@@ -59,16 +58,16 @@ Class Core
 //        echo '<br>' . $this->currentMethod . '<br>';
 
 
-        call_user_func_array([ $this->currentController, $this->currentMethod ], $this->params);
-
+        call_user_func_array([ $this->currentController, $this->currentMethod ], $this->params);// call the action in the selected controller
+        // you should use this function because => You have an array with the arguments for your function which is of indeterminate length.
     }
 
 
     public function get_url()
     {
-        if (isset($_GET['url']))
+        if (isset($_SERVER['REQUEST_URI']))
         {
-            $url = rtrim($_GET['url'], '/');
+            $url = rtrim($_SERVER['REQUEST_URI'], '/');
             $url = filter_var($url, FILTER_SANITIZE_URL);
 
             $url = explode('/', $url, 3);
