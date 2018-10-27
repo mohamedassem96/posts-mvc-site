@@ -11,6 +11,11 @@
 // Load Config File
 require_once 'config/config.php';
 
+//Load Helper File
+require_once 'helper/url_helper.php';
+
+require_once 'helper/session_helper.php';
+
 
 
 // Autoload core Libraries Classes

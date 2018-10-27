@@ -1,0 +1,9 @@
+nav .navbar-inverse
+{
+    color: white;
+}
+
+.custom_err
+{
+    border: 1px solid #bf0000;
+}

@@ -12,13 +12,9 @@ array_push($path, 'css');
 
 $filePath = implode(DIRECTORY_SEPARATOR, $path);
 
-define('CSSROOT', '/css/');
-
-
-define('JSROOT', '/js/');
-
-
 define('SITENAME', 'phptraversymvc');
+
+define('URLROOT', 'http://phptraversymvc.com/');
 
 define('DB_HOST', 'phptraversymvc.com');
 

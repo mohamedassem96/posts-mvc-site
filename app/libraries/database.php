@@ -55,7 +55,7 @@ class Database
 
 
     // Bind values
-    public function bind($param, $value, $type)
+    public function bind($param, $value, $type='')
     {
         if($type == null)
         {
@@ -86,6 +86,7 @@ class Database
     public function execute()
     {
         $this->db_stmt->execute();
+        return true;
     }
 
 
@@ -103,7 +104,6 @@ class Database
     public function singleResultSet()
     {
         $this->execute();
-
         return $this->db_stmt->fetch(PDO::FETCH_OBJ); // to get array of objects
     }
 

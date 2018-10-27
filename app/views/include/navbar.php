@@ -1,34 +1,40 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
+<nav class="nav navbar-inverse" role="navigation">
 
-    <a class="navbar-brand" href=""><?= SITENAME ?></a>
+    <div class="container">
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+        <div class="nav navbar-header">
 
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#">Disabled</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                <div class="dropdown-menu" aria-labelledby="dropdown01">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse" aria-expanded="false" aria-controls="collapse">
+                <span class="sr-only">Toggle Navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand" href="<?= URLROOT ?>">
+                <?= SITENAME ?>
+            </a>
+        </div>
+
+        <div id="collapse" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="<?= URLROOT ?>">Home</a></li>
+                <li><a href="<?=URLROOT?>pages/about">About</a></li>
+
+                <?php if (isset($_SESSION['user_id'])): ?>
+
+                <li id="user"><a href=""><?= $_SESSION['user_name']?></a></li>
+                <li><a href="<?=URLROOT?>users/logout">Logout</a></li>
+
+                <?php else: ?>
+
+                <li id="user"><a href="<?=URLROOT?>users/register">Register</a></li>
+                <li><a href="<?=URLROOT?>users/login">Login</a></li>
+
+                <?php endif; ?>
+
+            </ul>
+        </div>
     </div>
+
 </nav>
