@@ -85,8 +85,9 @@ class Database
     // Execute the prepared statement
     public function execute()
     {
-        $this->db_stmt->execute();
-        return true;
+        if($this->db_stmt->execute()){
+            return true;
+        }
     }
 
 
@@ -104,7 +105,7 @@ class Database
     public function singleResultSet()
     {
         $this->execute();
-        return $this->db_stmt->fetch(PDO::FETCH_OBJ); // to get array of objects
+        return $this->db_stmt->fetch(PDO::FETCH_OBJ);
     }
 
 

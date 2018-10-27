@@ -41,7 +41,6 @@ function isLoggedin()
     else
     {
         flash('authenticate_fun', 'Sorry you must login', 'alert alert-danger');
-        redirect('users/login');
         return false;
     }
 }

@@ -58,7 +58,6 @@ Class Core
 
 //        echo '<br>' . $this->currentMethod . '<br>';
 
-
         call_user_func_array([ $this->currentController, $this->currentMethod ], $this->params);
 
     }
@@ -66,9 +65,9 @@ Class Core
 
     public function get_url()
     {
-        if (isset($_GET['url']))
+        if (isset($_SERVER['REQUEST_URI']))
         {
-            $url = rtrim($_GET['url'], '/');
+            $url = trim($_SERVER['REQUEST_URI'], '/');
             $url = filter_var($url, FILTER_SANITIZE_URL);
 
             $url = explode('/', $url, 3);

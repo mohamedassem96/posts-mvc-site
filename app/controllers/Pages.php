@@ -8,11 +8,20 @@ class Pages extends Controller
     public function __construct()
     {
 
+        if(! isLoggedin())
+        {
+            redirect('users/login');
+        }
+
 //        echo 'pages loaded';
     }
 
     public function index()
     {
+        if(isLoggedin())
+        {
+            redirect('posts');
+        }
 
         $data =
             [

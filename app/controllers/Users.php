@@ -9,6 +9,18 @@ Class Users extends Controller
         $this->usersModel = $this->model('usersModel');
     }
 
+    public function index()
+    {
+        if(! isLoggedin())
+        {
+            redirect('users/login');
+        }
+        else
+        {
+            die('page not found!');
+        }
+    }
+
     public function register()
     {
         // Check for post
@@ -207,7 +219,7 @@ Class Users extends Controller
         $_SESSION['user_name'] = $user->name;
         $_SESSION['user_password'] = $user->password;
 
-        redirect('pages/index');
+        redirect('posts');
     }
 
 
@@ -217,19 +229,4 @@ Class Users extends Controller
         session_destroy();
         redirect('users/login');
     }
-
-
-//    private function isLoggedin()
-//    {
-//        if(isset($_SESSION['user_id']))
-//        {
-//            return true;
-//        }
-//        else
-//        {
-//            flash('authenticate_fun', 'Sorry you must login', 'alert alert-danger');
-//            redirect('users/login');
-//            return false;
-//        }
-//    }
 }
