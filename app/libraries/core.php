@@ -48,6 +48,7 @@ Class Core
             $url = explode('/', $url[2]);
 
             $this->params = array_values($url);
+//            unset($url[0]);
         }
 
 

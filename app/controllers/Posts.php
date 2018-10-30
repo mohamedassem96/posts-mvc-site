@@ -98,19 +98,21 @@ Class Posts extends Controller
 
     public function edit($id)
     {
+
         if($_SERVER['REQUEST_METHOD'] == 'POST')
         {
             //Sanitize POST array
             $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
             $data= [
-                'id'    > $id, // from url
+                'id'    => $id, // from url
                 'title' => $_POST['title'],
                 'body' => $_POST['body'],
                 'user_id' => $_SESSION['user_id'],
                 'title_err' => '',
                 'body_err' => ''
             ];
+
 
 
 
