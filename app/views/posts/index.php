@@ -1,6 +1,6 @@
 <?php require APPROOT . '/views/include/header.php'; ?>
 
-<?= flash('post_status'); ?>
+<?= flash(); ?>
 
 <div class="row">
 

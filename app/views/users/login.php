@@ -10,8 +10,9 @@
                 </span>
 
             </div>
-            <?= flash('register_success') ?>
-            <?= flash('authenticate_fun') ?>
+
+            <?= flash() ?>
+
             <div class="panel-body">
 
                 <form action="<?=URLROOT?>users/login" method="post">

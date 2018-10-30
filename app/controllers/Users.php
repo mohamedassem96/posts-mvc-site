@@ -91,7 +91,7 @@ Class Users extends Controller
 
                 if($this->usersModel->register($data))
                 {
-                    flash('register_success', 'Registered Successfully :)');
+                    $_SESSION['success_msg'] = 'Registered Successfully :)';
                     redirect('users/login');
                 }else
                 {

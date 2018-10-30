@@ -63,12 +63,12 @@ Class Posts extends Controller
 
                 if ($this->postsModel->addPosts($data))
                 {
-                    flash('post_status', 'post added successfully :)');
+                    $_SESSION['success_msg'] = 'post added successfully :)';
                     redirect('posts');
                 }
                 else
                 {
-                    flash('post_status', 'post addition failed :(' , 'alert alert-danger');
+                    $_SESSION['error_msg'] = 'post addition failed :(';
                     redirect('posts/add');
                 }
 
@@ -134,12 +134,12 @@ Class Posts extends Controller
 
                 if ($this->postsModel->editPosts($data))
                 {
-                    flash('post_status', 'post updated successfully :)');
+                    $_SESSION['success_msg'] = 'post updated successfully :)';
                     redirect('posts');
                 }
                 else
                 {
-                    flash('post_status', 'post updating failed :(' , 'alert alert-danger');
+                    $_SESSION['success_msg'] = 'post updating failed :(';
                     redirect('posts/add');
                 }
 
@@ -193,12 +193,13 @@ Class Posts extends Controller
 
         if($this->postsModel->deletePosts($data))
         {
-            flash('post_status', 'post deleted successfully');
+            $_SESSION['success_msg'] = 'post deleted successfully';
             redirect('posts');
         }
         else
         {
-            die('Deletion failed some thing went wrong :(');
+            $_SESSION['error_msg'] = 'post deletion failed :(';
+            redirect('posts/delete');
         }
     }
 
