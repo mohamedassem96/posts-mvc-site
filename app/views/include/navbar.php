@@ -20,17 +20,17 @@
             <ul class="nav navbar-nav">
                 <li class="active"><a href="<?= URLROOT ?>">Home</a></li>
                 <li><a href="<?=URLROOT?>pages/about">About</a></li>
-                <li><a href="<?=URLROOT?>posts">Posts</a></li>
 
                 <?php if (isset($_SESSION['user_id'])): ?>
 
-                <li id="user"><a href=""><?= $_SESSION['user_name']?></a></li>
-                <li><a href="<?=URLROOT?>users/logout">Logout</a></li>
+                    <li><a href="<?=URLROOT?>posts">Posts</a></li>
+                    <li id="user"><a href=""><?= $_SESSION['user_name']?></a></li>
+                    <li><a href="<?=URLROOT?>users/logout">Logout</a></li>
 
                 <?php else: ?>
 
-                <li id="user"><a href="<?=URLROOT?>users/register">Register</a></li>
-                <li><a href="<?=URLROOT?>users/login">Login</a></li>
+                    <li id="user"><a href="<?=URLROOT?>users/register">Register</a></li>
+                    <li><a href="<?=URLROOT?>users/login">Login</a></li>
 
                 <?php endif; ?>
 
