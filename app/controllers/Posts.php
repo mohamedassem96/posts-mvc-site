@@ -9,6 +9,7 @@ Class Posts extends Controller
     {
         if(! isLoggedin())
         {
+            $_SESSION['error_msg'] = 'sorry you must login';
             redirect('users/login');
         }
 

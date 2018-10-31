@@ -20,6 +20,7 @@
             <ul class="nav navbar-nav">
                 <li class="active"><a href="<?= URLROOT ?>">Home</a></li>
                 <li><a href="<?=URLROOT?>pages/about">About</a></li>
+                <li><a href="<?=URLROOT?>posts">Posts</a></li>
 
                 <?php if (isset($_SESSION['user_id'])): ?>
 

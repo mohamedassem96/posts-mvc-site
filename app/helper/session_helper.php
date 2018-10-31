@@ -11,12 +11,16 @@ function flash()
         $output = "<div class='alert alert-success'>";
         $output .= htmlentities($_SESSION['success_msg']);
         $output .= "</div>";
+
+        unset($_SESSION['success_msg']);
     }
     else if (isset($_SESSION['error_msg']))
     {
         $output = "<div class='alert alert-danger'>";
         $output .= htmlentities($_SESSION['error_msg']);
         $output .= "</div>";
+
+        unset($_SESSION['error_msg']);
     }
 
     return $output;
@@ -31,7 +35,6 @@ function isLoggedin()
     }
     else
     {
-        flash('authenticate_fun', 'Sorry you must login', 'alert alert-danger');
         return false;
     }
 }

@@ -8,24 +8,24 @@ class Pages extends Controller
     public function __construct()
     {
 
-        if(! isLoggedin())
-        {
-            redirect('users/login');
-        }
+//        if(! isLoggedin())
+//        {
+//            redirect('users/login');
+//        }
 
 //        echo 'pages loaded';
     }
 
     public function index()
     {
-        if(isLoggedin())
-        {
-            redirect('posts');
-        }
+//        if(isLoggedin())
+//        {
+//            redirect('posts');
+//        }
 
         $data =
             [
-            'title' => 'Hello every buddy',
+            'title' => 'Hello It\'s Home Page' ,
             ];
 
         $this->view('pages/index', $data);
@@ -33,7 +33,10 @@ class Pages extends Controller
 
     public function about()
     {
-        $data = ['title' => 'Hello every buddy'];
+        $data =
+            [
+                'title' => 'Hello It\'s About Page'
+            ];
 
         $this->view('pages/about', $data);
     }
