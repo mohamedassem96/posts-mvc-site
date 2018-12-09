@@ -1,5 +1,7 @@
 <?php
 
+namespace PHPPOSTSMVC\Controllers;
+
 Class Posts extends Controller
 {
 

@@ -1,5 +1,7 @@
 <?php
 
+namespace PHPPOSTSMVC\Controllers;
+
 Class Users extends Controller
 {
     private $usersModel;

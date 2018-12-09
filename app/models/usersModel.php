@@ -6,6 +6,8 @@
  * Time: 11:38 PM
  */
 
+namespace PHPPOSTSMVC\Models;
+
 class UsersModel
 {
     private $db;

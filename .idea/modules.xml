@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/phppostsmvc.iml" filepath="$PROJECT_DIR$/.idea/phppostsmvc.iml" />
       <module fileurl="file://$PROJECT_DIR$/../phptraversymvc/.idea/phptraversymvc.iml" filepath="$PROJECT_DIR$/../phptraversymvc/.idea/phptraversymvc.iml" />
     </modules>
   </component>

@@ -1,5 +1,8 @@
 <?php
 
+namespace PHPPOSTSMVC\Models;
+
+
 class PostsModel
 {
     private $db;

@@ -1,5 +1,6 @@
 <?php
 
+namespace PHPPOSTSMVC\Controllers;
 
 class Pages extends Controller
 {

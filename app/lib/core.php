@@ -7,6 +7,7 @@
  *
  */
 
+namespace PHPPOSTSMVC\LIB;
 Class Core
 {
     // Default Controller
@@ -21,7 +22,7 @@ Class Core
 
         //print_r($url);
 
-        if (file_exists('../app/controllers/' . ucfirst($url[0]) . '.php') )
+        if (file_exists(APPROOT . 'controllers' . DIRECTORY_SEPARATOR . ucfirst($url[0]) . '.php') )
         {
             // if exists .. set as controller
             $this->currentController = $url[0];
@@ -31,12 +32,12 @@ Class Core
 
 
         // require the Controller
-        require_once '../app/controllers/' . $this->currentController . '.php';
+        $controllerName = 'PHPPOSTSMVC\\Controllers\\' . $this->currentController;
 
 
         if ( isset($url[1]) )
         {
-            if (method_exists($this->currentController, $url[1]))
+            if (method_exists($controllerName, $url[1]))
             {
                 $this->currentMethod = $url[1];
                 unset($url[1]);
@@ -54,12 +55,12 @@ Class Core
 
         // Instantiate The Controller
 
-        $this->currentController = new $this->currentController;
+        $controllerName = new $controllerName;
 
 
 //        echo '<br>' . $this->currentMethod . '<br>';
 
-        call_user_func_array([ $this->currentController, $this->currentMethod ], $this->params);
+        call_user_func_array([ $controllerName, $this->currentMethod ], $this->params);
 
     }
 
