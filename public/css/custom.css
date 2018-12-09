@@ -5,5 +5,11 @@ nav .navbar-inverse
 
 .custom_err
 {
-    border: 1px solid #bf0000;
+    border: 1px solid #7ee178;
+}
+
+textarea#body
+{
+    width: 100%;
+    height: 100%;
 }

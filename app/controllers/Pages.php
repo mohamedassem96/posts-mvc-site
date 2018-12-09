@@ -28,7 +28,7 @@ class Pages extends Controller
             'title' => 'Hello It\'s Home Page' ,
             ];
 
-        $this->view('pages/index', $data);
+        $this->view('pages/indexView', $data);
     }
 
     public function about()
@@ -38,6 +38,6 @@ class Pages extends Controller
                 'title' => 'Hello It\'s About Page'
             ];
 
-        $this->view('pages/about', $data);
+        $this->view('pages/aboutView', $data);
     }
 }

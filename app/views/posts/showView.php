@@ -1,4 +1,5 @@
 <?php require APPROOT . '/views/include/header.php'; ?>
+
 <a class="btn btn-default" href="<?=URLROOT?>posts"> <i class="glyphicon glyphicon-backward"></i> Back</a>
 
 <?//= var_dump($data) ?>

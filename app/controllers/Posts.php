@@ -25,7 +25,7 @@ Class Posts extends Controller
 
         $data['posts'] = $posts;
 
-        $this->view('posts/index', $data);
+        $this->view('posts/indexView', $data);
     }
 
 
@@ -78,7 +78,7 @@ Class Posts extends Controller
             {
                 //load view with errors
 
-                $this->view('posts/add', $data);
+                $this->view('posts/addView', $data);
             }
         }
         else
@@ -93,7 +93,7 @@ Class Posts extends Controller
         }
 
 
-        $this->view('posts/add', $data);
+        $this->view('posts/addView', $data);
     }
 
 
@@ -149,7 +149,7 @@ Class Posts extends Controller
             {
                 //load view with errors
 
-                $this->view('posts/edit', $data);
+                $this->view('posts/editView', $data);
             }
         }
         else
@@ -173,7 +173,7 @@ Class Posts extends Controller
         }
 
 
-        $this->view('posts/edit', $data);
+        $this->view('posts/editView', $data);
     }
 
 
@@ -214,6 +214,6 @@ Class Posts extends Controller
 
 //        var_dump($data);
 
-        $this->view('posts/show', $data);
+        $this->view('posts/showView', $data);
     }
 }

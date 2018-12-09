@@ -75,6 +75,7 @@ class Database
 
                 default:
                     $type = PDO::PARAM_STR;
+                    break;
             }
         }
 

@@ -3,4 +3,4 @@
  RewriteCond %{REQUEST_FILENAME} !-d
  RewriteRule ^(.*)$ /index.php
 
- # redirect any Apache requset to index.php
+ # redirect any Apache requset to indexView.php

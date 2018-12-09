@@ -18,7 +18,7 @@ define('URLROOT', 'http://phptraversymvc.com/');
 
 define('DB_HOST', 'phptraversymvc.com');
 
-define('DB_NAME', 'shareposts');
+define('DB_NAME', 'posts_mvc');
 
 define('DB_USERNAME', 'root');
 

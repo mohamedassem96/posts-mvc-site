@@ -102,7 +102,7 @@ Class Users extends Controller
             {
                 //load the view with errors
 
-                $this->view('users/register', $data);
+                $this->view('users/registerView', $data);
             }
 
 
@@ -122,7 +122,7 @@ Class Users extends Controller
                 'confirm_password_err' => '',
             ];
 
-            $this->view('users/register', $data);
+            $this->view('users/registerView', $data);
         }
     }
 
@@ -179,21 +179,21 @@ Class Users extends Controller
                     }else
                     {
                         $data['password_err'] = 'Incorrect password';
-                        $this->view('users/login', $data);
+                        $this->view('users/loginView', $data);
                     }
                 }
                 else
                 {
                     // user not found
                     $data['email_err'] = 'No user found with this email';
-                    $this->view('users/login', $data);
+                    $this->view('users/loginView', $data);
                 }
             }
             else
             {
                 //load the view with errors
 
-                $this->view('users/login', $data);
+                $this->view('users/loginView', $data);
             }
         }
         else
@@ -207,7 +207,7 @@ Class Users extends Controller
                 'password_err' => '',
             ];
 
-            $this->view('users/login', $data);
+            $this->view('users/loginView', $data);
         }
     }
 
