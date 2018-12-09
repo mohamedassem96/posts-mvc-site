@@ -19,9 +19,9 @@
 
 <?php if($data['post']->user_id == $_SESSION['user_id']): ?>
 
-<a class="btn btn-default" href="<?=URLROOT?>posts/edit/<?= $data['post']->id ?>">Edit</a>
+<a class="btn btn-default" href="<?=URLROOT?>posts/edit/<?= $data['post']->id ?>"> Edit </a>
 
-<a class="btn btn-danger" href="<?=URLROOT?>posts/delete/<?= $data['post']->id ?>">Delete</a>
+<a class="btn btn-danger" href="<?=URLROOT?>posts/delete/<?= $data['post']->id ?>"> Delete </a>
 
 <?php endif; ?>
 

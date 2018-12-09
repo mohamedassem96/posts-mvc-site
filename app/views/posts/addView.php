@@ -25,10 +25,10 @@
                         <div class="input-group input-group-lg">
 
                             <span class="input-group-addon">
-                                <span class="glyphicon glyphicon-envelope"></span>
+                                <span class="glyphicon glyphicon-bookmark"></span>
                             </span>
 
-                            <input type="text" class="form-control <?= (empty($data['title_err']))?'':'custom_err'?>" id="title" name="title" value="<?= $data['title'] ?>" placeholder="Title">
+                            <input type="text" class="form-control <?= (empty($data['title_err']))?'':'custom_err'?>" id="title" name="title" value="<?= $data['title'] ?>" placeholder="title">
                         </div>
                         <span class="text-danger"><?= $data['title_err']?></span>
                     </div>
@@ -39,9 +39,9 @@
                         <div class="input-group input-group-lg">
 
                             <span class="input-group-addon">
-                                <span class="glyphicon glyphicon-lock"></span>
+                                <span class="glyphicon glyphicon-book"></span>
                             </span>
-                            <textarea  class="form-control <?= (empty($data['body_err']))?'':'custom_err'?>" id="body" name="body"><?= $data['body']?></textarea>
+                            <textarea class="form-control <?= (empty($data['body_err']))?'':'custom_err'?>" id="body" name="body"><?= $data['body']?></textarea>
                         </div>
 
                         <span class="text-danger"><?= $data['body_err']?></span>
