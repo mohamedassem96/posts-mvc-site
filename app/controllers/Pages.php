@@ -8,7 +8,6 @@ class Pages extends Controller
 
     public function __construct()
     {
-
 //        if(! isLoggedin())
 //        {
 //            redirect('users/login');
